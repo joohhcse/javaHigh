@@ -1,4 +1,4 @@
-package basic;
+package kr.or.ddit.basic;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +104,11 @@ public class T02_ArrayListTest {
 //			list2.remove(i);
 //		}
 		System.out.println(list2.size());
+		
+		
+		
+		
+			
 	}
 
 }
