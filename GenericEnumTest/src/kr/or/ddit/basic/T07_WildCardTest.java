@@ -20,7 +20,7 @@ public class T07_WildCardTest {
 	 * 모든과정 등록
 	 * @param course 모든과정
 	 */
-	public static void registerCourse(Course<?> course) {
+	public static void registerCourse(Course<?> course) {	//Course<?> = Course<? extends Object>
 		System.out.println(course.getName() 
 							+ " 수강생: " 
 				            + Arrays.toString(course.getStudents()));
