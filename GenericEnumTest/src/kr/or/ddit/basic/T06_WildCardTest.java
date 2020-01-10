@@ -20,6 +20,9 @@ ex) public static <T extends Number> void copy(List<T> dest, List<T> src) => 메
 ex) public void print(List<? super Integer> list)  // OK
     public <T super Integer> void print(List<T> list)  // 컴파일에러
 
+//Fruit : 부모 클래스
+//Apple , Grape : 자식클래스
+
 */
 public class T06_WildCardTest {
 	public static void main(String[] args) {
@@ -43,11 +46,12 @@ public class T06_WildCardTest {
  * 쥬서
  */
 class Juicer{
-	static void makeJuice(FruitBox<Fruit> box) { // 제너릭 타입 객체를 파라미터에 사용시 문제점 발생함.
+	//static void makeJuice(FruitBox<Fruit> box) { // 제너릭 타입 객체를 파라미터에 사용시 문제점 발생함.
 		                                         // 지네릭 타입이 다른 것만으로는 오버로딩이 성립하지 않음 => 컴파일 후 제거됨.=> 메서드 중복정의
 		                                         // 와일드 카드를 이용하여 해결가능.
 		
-	//static void makeJuice(FruitBox<? extends Fruit> box) {  // 와일드카드를 이용 //타입의 범위를 허용할 수 있다.
+	//FruitBox : Generic class -> class FruitBox<T> 
+	static void makeJuice(FruitBox<? extends Fruit> box) {  // 와일드카드를 이용 //타입의 범위를 허용할 수 있다.
 	
 	// 지네릭 메서드(제한된 타입 파라미터) 이용 // T타입으로 올수있는건 사과,포도 가능 //제한된 타입 파라미터 문법으로 범위를 넓힘 
 	//static <T extends Fruit> void makeJuice(FruitBox<T> box) { 
