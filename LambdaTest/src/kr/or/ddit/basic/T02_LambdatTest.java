@@ -21,13 +21,12 @@ public interface T02_LambdatTest {
 		
 		// ================================================================
 		
-		
 		/*
 		 * 람다식의 작성 방법
 		 * 
 		 * 기본형식) (자료형이름 매개변수명, ...) -> {실행문들; ...}
 		 * 
-		 * 1) 매개변수의 '자료형이름'은 생략할 수 있다.
+		 * 1) 매개변수의 '자료형 이름'은 생략할 수 있다.
 		 * ex) (int a) -> { System.out.println(a);}
 		 * ex) (a) -> { System.out.println(a);}
 		 * 
@@ -67,6 +66,8 @@ public interface T02_LambdatTest {
 		z -> System.out.println("result = " + (z+500));
 		lam5.test(90);
 		
+		System.out.println("===================================================");
+		
 		LambdaTestInterFace3 lam6 =
 		(int x, int y) -> {
 			int r = x + y;
@@ -83,7 +84,7 @@ public interface T02_LambdatTest {
 		System.out.println("k = " + k);
 		
 		LambdaTestInterFace3 lam8 =
-		(x, y) -> x+y;
+		(x, y) -> x + y;
 		k = lam8.test(100,  200);
 		System.out.println("k = " + k);
 		
