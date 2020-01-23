@@ -50,22 +50,47 @@ public interface T02_LambdatTest {
 		 */
 		
 		LambdaTestInterFace2 lam3 =
-				(int z) -> {
-					int result = z + 100;
-					System.out.println("result = " + result);
-				};
-				lam3.test(30);
+		(int z) -> {
+			int result = z + 100;
+			System.out.println("result = " + result);
+		};
+		lam3.test(30);
+		
+		LambdaTestInterFace2 lam4 = 
+		z -> {
+			int result = z + 300;
+			System.out.println("result = " + result);
+		};
+		lam4.test(60);
+		
+		LambdaTestInterFace2 lam5 =
+		z -> System.out.println("result = " + (z+500));
+		lam5.test(90);
+		
+		LambdaTestInterFace3 lam6 =
+		(int x, int y) -> {
+			int r = x + y;
+			return r;
+		};
+		int k = lam6.test(20, 50);
+		System.out.println("k = " + k );
+		
+		LambdaTestInterFace3 lam7 =
+		(x, y) -> {
+			return x + y;
+		};
+		k = lam7.test(80, 50);
+		System.out.println("k = " + k);
+		
+		LambdaTestInterFace3 lam8 =
+		(x, y) -> x+y;
+		k = lam8.test(100,  200);
+		System.out.println("k = " + k);
+		
+		LambdaTestInterFace3 lam9 =
+		(x, y) -> {return x > y ? x : y;};
+		k = lam9.test(100, 200);
+		System.out.println("k = " + k);
 				
-				LambdaTestInterFace2 lam4 = 
-					z -> {
-						int result = z + 300;
-						System.out.println("result = " + result);
-					};
-				lam4.test(60);
-				
-				LambdaTestInterface2 lam5 =
-					z -> System.out.println("result = " + (z+500));
-				lam5.test(90);
 	}
-	
 }
