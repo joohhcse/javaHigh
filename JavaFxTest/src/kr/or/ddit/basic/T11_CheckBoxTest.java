@@ -88,7 +88,7 @@ public class T11_CheckBoxTest extends Application {
 		
 		HBox hbox = new HBox();
 		hbox.getChildren().addAll(icons);
-		hbox.setPadding(new Insets(0,0,0,5));
+		hbox.setPadding(new Insets(0,0,0,5));	//시계방향으로 Insets 설정
 		
 		// StackPane은 컨트롤들을 쌓아놓는 방식으로 배치하는 컨테이너다.
 		StackPane stack = new StackPane();

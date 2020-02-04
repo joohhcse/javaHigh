@@ -42,8 +42,8 @@ public class T09_ComboBoxTest extends Application {
 												observable,
 												String oldValue,
 												String newValue) {
-					System.out.println("oldValue" + oldValue);
-					System.out.println("newValue" + newValue);
+					System.out.println("oldValue" + oldValue);	//log
+					System.out.println("newValue" + newValue);	//log
 					txtArea.setText(newValue);
 				}
 		});
